@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+<py-env>
+  - path:
+    - main.py
+</py-env>
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+#add_todo {margin-left: 5px}
+#demo_page:hover{
+  background: silver;
+}
+table {color: black; font-size: 15px}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABSTRACT</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AUDIO DEMO</a>
+    <!-- <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">Developers <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Developers</a>
+      </div>
+    </div> -->
+    <!-- <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a> -->
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="image_audio/Muse.PNG" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="image_audio/subtitle.png" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide"><b>MuSE-SVS</b></h2>
+    <p class="w3-opacity"><i>Multi Singer Emotional Singing Voice Synthesizer that Controls Emotional Intensity</i></p>
+    <p class="w3-justify">We propose a multi-singer emotional singing voice
+      synthesizer, <b>Muse-SVS</b>, that expresses emotion at various intensity levels by controlling subtle changes in pitch and phoneme
+      length while accurately following the lyrics, pitch, and phoneme
+      length of the score. To control multiple style attributes avoiding
+      loss of fidelity and expressiveness due to interference between
+      attributes, Muse-SVS represents all attributes and their relations
+      together by a joint embedding in a unified embedding space.
+      Muse-SVS can express emotional intensity not in the training
+      data, including even stronger emotions than those in the training
+      data, through emotion embedding interpolation and extrapolation. We also propose a statistical pitch predictor to express pitch
+      variance according to emotional intensity and a context-aware
+      residual duration predictor to prevent the accumulation of variances in phoneme duration, which is crucial for synchronization
+      when synthesizing long singing voices. In addition, we propose
+      a novel ASPP-Transformer to improve fidelity and expressiveness by referring to broad contexts. In experiments, Muse-SVS
+      exhibited improved fidelity, expressiveness, and synchronization
+      performance compared with the baseline models. The results of
+      quantitative evaluation and visualization analysis show that the
+      proposed methods effectively express the variance in pitch and
+      phoneme duration according to emotional intensity. To the best
+      of our knowledge, Muse-SVS is the first singing voice synthesizer
+      capable of controlling emotional intensity.
+      <!-- <a style='text-align: center; font-size: 15px; color: #9F8772;' href="https://arxiv.org/pdf/2203.00931.pdf" > U-Singer Paper link</a> -->
+      </p>
+  </div>
+
+  <div class="images" id="images" style="text-align: center;">
+    <table align="center">
+      <tr>
+        <td><img src="image_audio/model_structure.PNG" style="width:650px"/></td><td><img src="image_audio/va.png" style="width:600px"/></td>
+      <tr>
+      <tr>
+        <td align="center">Model Overall Structure</td><td align="center">Variance Adaptor Structure</td>
+      </tr>
+    </table>
+    <br><br><br><br>
+  </div>
+  <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1600px">
+      <h2 class="w3-wide w3-center">Audio Demo</h2>
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>Demonstaration of overall performance</b>
+          <p style="font-size: 25px; color:black; text-align:center;">Please listen to the samples, <b style="color: red">focusing on expressiveness and fidelity.</b> </p>
+          <p style="font-size: 18px; color:black; text-align:center;">There are the samples of other intensity levels in<a href="#audio"> here</a></p>
+          <p style="font-size: 20px; color:black; text-align:center;">Samples of male singer (Sad)</p>
+          <table align="center">
+            <colgroup span="5" class="columns"></colgroup>
+            <tr align="center">
+              <th></th>
+              <th>Neutral</th>
+              <th>Sad 1.0</th>
+              <!-- <th>Sad 0.7</th>
+              <th>Sad 0.3</th> -->
+            </tr>
+            <tr>
+              <td><b style="color: blue">MuSE-SVS<br>(proposed)</b></td>
+              <td><audio controls src="image_audio/Muse_SVS/M2_sad010_26_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/Muse_SVS/M2_sad010_26_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <!-- <td><audio controls src="image_audio/Muse_SVS/M2_sad010_26_07.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/Muse_SVS/M2_sad010_26_03.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td> -->
+            </tr>
+            <tr>
+              <td><b>extVISinger</b></td>
+              <td><audio controls src="image_audio/VISinger/M2_sad010_26_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/VISinger/M2_sad010_26_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <!-- <td><audio controls src="image_audio/VISinger/M2_sad010_26_07.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/VISinger/M2_sad010_26_03.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td> -->
+            </tr>
+            <tr>
+              <td><b>extFFTSinger</b></td>
+              <td><audio controls src="image_audio/FFTSinger/M2_sad010_26_00_vocgan_spk-4_emo-0.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/FFTSinger/M2_sad010_26_10_vocgan_spk-4_emo-6.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <!-- <td><audio controls src="image_audio/FFTSinger/M2_sad010_26_07_vocgan_spk-4_emo-5.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/FFTSinger/M2_sad010_26_03_vocgan_spk-4_emo-4.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td> -->
+            </tr>
+            <tr>
+              <td><b>GT</b></td>
+              <td><audio controls src="image_audio/GT/M2_sad010_26_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/GT/M2_sad010_26_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <!-- <td><audio controls src="image_audio/FFTSinger/F2_joy015_06_07_vocgan_spk-3_emo-2.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/FFTSinger/F2_joy015_06_03_vocgan_spk-3_emo-1.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td> -->
+            </tr>
+          </table>
+          <br>
+          <p style="font-size: 20px; color:black; text-align:center;">Samples of female singer (Happy)</p>
+          <table align="center">
+            <colgroup span="5" class="columns"></colgroup>
+            <tr align="center">
+              <th></th>
+              <th>Neutral</th>
+              <th>Happy 1.0</th>
+            </tr>
+            <tr>
+              <td><b style="color: blue">MuSE-Singer<br>(proposed)</b></td>
+              <td><audio controls src="image_audio/Muse_SVS/F2_joy015_06_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/Muse_SVS/F2_joy015_06_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <td><b>extVISinger</b></td>
+              <td><audio controls src="image_audio/VISinger/F2_joy015_06_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/VISinger/F2_joy015_06_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <td><b>extFFTSinger</b></td>
+              <td><audio controls src="image_audio/FFTSinger/F2_joy015_06_00_vocgan_spk-3_emo-0.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/FFTSinger/F2_joy015_06_10_vocgan_spk-3_emo-3.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <td><b>GT</b></td>
+              <td><audio controls src="image_audio/GT/F2_joy015_06_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/GT/F2_joy015_06_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+          </table>
+         
+        </li>
+
+        <!-- Statistical Pitch Predictor -->
+        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>Statistical Pitch Predictor</b><br>
+          <p style="font-size: 25px; color:black; text-align:center;">Please listen to the samples <b style="color:red;">focusing on vibrato and expressiveness</b> which have high similarity with G.T.</p>
+          <p style="font-size: 15px; color:black;">
+            This audio samples are corresponding to figure 3 in the paper. Please check more details of the figure in the paper.</p>
+          <img src="image_audio/SPP.png" style="width:1300px;"/>
+          <table align="center">
+            <colgroup span="5" class="columns"></colgroup>
+            <tr align="center">
+              <th></th>
+              <th>Neutral</th>
+              <th>Sad 1.0</th>
+            </tr>
+            <tr>
+              <td><b>G.T.</b></td>
+              <td><audio controls src="image_audio/GT/F2_sad010_05_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <!-- GT vocgan 통과시킨걸로 교체해야함 -->
+              <td><audio controls src="image_audio/GT/F2_sad010_05_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <td><b>Deterministic Pitch Predictor(conventional)</b></td>
+              <td><audio controls src="image_audio/Muse_SVS/F2_sad010_05_00(convention).wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/Muse_SVS/F2_sad010_05_10(convention).wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <td><b style="color: blue">Statistical Pitch Predictor(proposed)</b></td>
+              <td><audio controls src="image_audio/Muse_SVS/F2_sad010_05_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/Muse_SVS/F2_sad010_05_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+          </table>
+                      
+
+        </li>
+
+        <!-- CRDP -->
+        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>Context-aware Residual Duration Predictor(CRDP)</b><br>
+          <p style="font-size: 25px; color:black; text-align:center;">These audio sample and figure demonstrate that CRDP <b style="color: red">exhibited a significantly lower synchronization error</b> than the baseline predictors for a long song. <br>Please listen to the sample, <b style="color: red">focusing on similarity between duration of synthesized voice and MIDI</b>. </p>
+          
+          <p style="font-size: 15px; color:black;">This figure is figure7 of the paper. Please check more details of the figure in the paper.</p>
+
+          <audio controls src="image_audio/svs1.mp3">해당 브라우저는 audio를 지원하지 않습니다.</audio>
+            
+          <img src="image_audio/crdp_graph.PNG" style="width:700px;"/>
+        </li>
+
+        
+        <!-- ASPP -->
+        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>ASPP-Transformer</b><br>
+          <p style="font-size: 25px; color:black; text-align:center;">This figure and audio samples demonstrate that <b style="color:red;">ASPP-Transformer refers to broader
+            contexts</b> than ordinary Transformer, <b style="color:red;">producing a more stable
+            Mel-spectrogram and vibrato</b>, which leads to improved fidelity
+            and expressiveness. <br>Please listen to the samples <b style="color:red">focusing on fidelity and expressiveness</b>.</p>
+          <p style="font-size: 15px; color:black;">This figure is figure5 of the paper. Please check more details of the figure in the paper.</p>
+          <img src="image_audio/ASPP_fig.png" style="width:700px;"/>
+          <p style="font-size: 15px; color:black;"></p>
+          <table align="center">
+            <colgroup span="5" class="columns"></colgroup>
+            <tr align="center">
+              <th><b style="color:blue">ASPP-Transformer</b></th>
+              <th>Transformer</th>
+            </tr>
+            <tr>
+              <td><audio controls src="image_audio/Muse_SVS/Fls2_sad010_11_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/Muse_SVS/F2_sad010_11_10(wout_ASPP).wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+
+          </table>
+        </li>
+
+        <!-- Interpolation and extrapolation -->
+        
+        <div id="audio">
+        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>Emotion Embeddding Interpolation and Extrapolation</b><br>
+          <p style="font-size: 25px; color:black; text-align:center;">Muse-SVS can synthesize singing voices with emotional intensities, <br>which is <b style="color:red">not included in training data by emotion embedding interpolation and extrapolation</b>.<br>Please listen to the samples, <b style="color: red">focusing on expressiveness and fidelity.</b> </p>
+          <p style="font-size: 15px; color:black;">This figure is figure8(b) of the paper. Please check more details of the figure in the paper.</p>
+          <img src="image_audio/embedding_space.png" style="width:600px;"/>
+          <p style="font-size: 15px; color:black;">Embedding Space</p>
+          <table align="center">
+            <colgroup span="5" class="columns"></colgroup>
+            <tr>
+              <th>Neutral</th>
+              <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_0.0.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <th>Happy 0.3</th>
+              <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_03.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <th><b style="color: blue">Happy 0.5 (not in the training data)</b></th>
+              <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_0.5.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <th>Happy0.7</th>
+              <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_07.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <th>Happy 1.0</th>
+              <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_1.0.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>  
+              <th><b style="color: blue">Happy 1.7 (beyond the intensity range of traning data)</b></th>
+              <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_1.7.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+          </table>
+        </li>
+      </div>
+      </ul>
+
+    </div>
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> -->
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
