@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>W3.CSS Template</title>
+<title>MuSE-SVS</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-<py-env>
-  - path:
-    - main.py
-</py-env>
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
@@ -113,46 +109,6 @@ table {color: black; font-size: 15px}
         <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>Demonstaration of overall performance</b>
           <p style="font-size: 23px; color:black; text-align:center;">Please listen to the samples, <b style="color: red">focusing on expressiveness and fidelity.</b> </p>
           <p style="font-size: 15px; color:black; text-align:center;">(There are the samples of other intensity levels in <a href="#audio">here</a>)</p>
-          <p style="font-size: 20px; color:black; text-align:center;"><br>Samples of male singer (Sad)</p>
-          <table align="center">
-            <colgroup span="5" class="columns"></colgroup>
-            <tr align="center">
-              <th></th>
-              <th>Neutral</th>
-              <th>Sad 1.0</th>
-              <!-- <th>Sad 0.7</th>
-              <th>Sad 0.3</th> -->
-            </tr>
-            <tr>
-              <td><b style="color: blue">MuSE-SVS<br>(proposed)</b></td>
-              <td><audio controls src="image_audio/Muse_SVS/M2_sad010_26_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <td><audio controls src="image_audio/Muse_SVS/M2_sad010_26_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <!-- <td><audio controls src="image_audio/Muse_SVS/M2_sad010_26_07.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <td><audio controls src="image_audio/Muse_SVS/M2_sad010_26_03.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td> -->
-            </tr>
-            <tr>
-              <td><b>MSME-VISinger</b></td>
-              <td><audio controls src="image_audio/VISinger/M2_sad010_26_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <td><audio controls src="image_audio/VISinger/M2_sad010_26_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <!-- <td><audio controls src="image_audio/VISinger/M2_sad010_26_07.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <td><audio controls src="image_audio/VISinger/M2_sad010_26_03.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td> -->
-            </tr>
-            <tr>
-              <td><b>MSME-FFTSinger</b></td>
-              <td><audio controls src="image_audio/FFTSinger/M2_sad010_26_00_vocgan_spk-4_emo-0.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <td><audio controls src="image_audio/FFTSinger/M2_sad010_26_10_vocgan_spk-4_emo-6.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <!-- <td><audio controls src="image_audio/FFTSinger/M2_sad010_26_07_vocgan_spk-4_emo-5.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <td><audio controls src="image_audio/FFTSinger/M2_sad010_26_03_vocgan_spk-4_emo-4.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td> -->
-            </tr>
-            <tr>
-              <td><b>GT</b></td>
-              <td><audio controls src="image_audio/GT/M2_sad010_26_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <td><audio controls src="image_audio/GT/M2_sad010_26_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <!-- <td><audio controls src="image_audio/FFTSinger/F2_joy015_06_07_vocgan_spk-3_emo-2.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <td><audio controls src="image_audio/FFTSinger/F2_joy015_06_03_vocgan_spk-3_emo-1.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td> -->
-            </tr>
-          </table>
-          <br>
           <p style="font-size: 20px; color:black; text-align:center;">Samples of female singer (Happy)</p>
           <table align="center">
             <colgroup span="5" class="columns"></colgroup>
@@ -162,7 +118,7 @@ table {color: black; font-size: 15px}
               <th>Happy 1.0</th>
             </tr>
             <tr>
-              <td><b style="color: blue">MuSE-Singer<br>(proposed)</b></td>
+              <td><b style="color: blue">MuSE-SVS<br>(proposed)</b></td>
               <td><audio controls src="image_audio/Muse_SVS/F2_joy015_06_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
               <td><audio controls src="image_audio/Muse_SVS/F2_joy015_06_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
             </tr>
@@ -182,16 +138,45 @@ table {color: black; font-size: 15px}
               <td><audio controls src="image_audio/GT/F2_joy015_06_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
             </tr>
           </table>
+          <p style="font-size: 20px; color:black; text-align:center;"><br>Samples of male singer (Sad)</p>
+          <table align="center">
+            <colgroup span="5" class="columns"></colgroup>
+            <tr align="center">
+              <th></th>
+              <th>Neutral</th>
+              <th>Sad 1.0</th>
+            </tr>
+            <tr>
+              <td><b style="color: blue">MuSE-SVS<br>(proposed)</b></td>
+              <td><audio controls src="image_audio/Muse_SVS/M2_sad010_13_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/Muse_SVS/M2_sad010_13_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <td><b>MSME-VISinger</b></td>
+              <td><audio controls src="image_audio/VISinger/M2_sad010_13_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/VISinger/M2_sad010_13_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <td><b>MSME-FFTSinger</b></td>
+              <td><audio controls src="image_audio/FFTSinger/M2_sad010_13_00_vocgan_spk-4_emo-0.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/FFTSinger/M2_sad010_13_10_vocgan_spk-4_emo-6.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+            <tr>
+              <td><b>GT</b></td>
+              <td><audio controls src="image_audio/GT/M2_sad010_13_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/GT/M2_sad010_13_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+            </tr>
+          </table>
           <br>
           <p style="font-size: 16px; color:black; text-align:center;">(Audio samples in demo page of the baseline models)</p>
           <table align="center">
             <tr align="center">
               <th>FastSpeech2</th>
-              <th>VITS</th>
+              <th>VISinger</th>
             </tr>
             <tr>
               <td><audio controls src="image_audio/FFTSinger/0000000017.mp3">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <td><audio controls src="image_audio/VISinger/ms_02_vits.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><audio controls src="image_audio/VISinger/exp3_11.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
            </tr>
           </table>
         </li>
@@ -232,7 +217,7 @@ table {color: black; font-size: 15px}
         <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>Context-aware Residual Duration Predictor (CRDP)</b><br>
           <p style="font-size: 23px; color:black; text-align:center;">These audio sample and figure demonstrate that CRDP <b style="color: red">exhibited a significantly lower synchronization error</b><br> than the baseline predictors for a long song. <br>Please listen to the sample, <b style="color: red">focusing on synchronization between duration of synthesized voice and MIDI</b>. </p>
           
-          <p style="font-size: 15px; color:black;">This figure is figure7 of the paper. Please check more details of the figure in the paper.</p>
+          <p style="font-size: 15px; color:black;">[Figure7 of the paper] Please check more details of the figure in the paper.</p>
 
           <audio controls src="image_audio/svs1.mp3">해당 브라우저는 audio를 지원하지 않습니다.</audio>
             
@@ -246,7 +231,7 @@ table {color: black; font-size: 15px}
             contexts</b> than ordinary Transformer,<br> <b style="color:red;">producing a more stable
             Mel-spectrogram and vibrato</b>, which leads to improved fidelity
             and expressiveness. <br>Please listen to the samples <b style="color:red">focusing on fidelity and expressiveness</b>.</p>
-          <p style="font-size: 15px; color:black;">This figure is figure5 of the paper. Please check more details of the figure in the paper.</p>
+          <p style="font-size: 15px; color:black;">[Figure5 of the paper] Please check more details of the figure in the paper.</p>
           <img src="image_audio/ASPP_fig.png" style="width:1000px;"/>
           <p style="font-size: 15px; color:black;"></p>
           <table align="center">
@@ -256,7 +241,7 @@ table {color: black; font-size: 15px}
               <th style="padding-left: 50px;">Transformer</th>
             </tr>
             <tr>
-              <td style="padding-left: 260px;"><audio controls src="image_audio/Muse_SVS/Fls2_sad010_11_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td style="padding-left: 260px;"><audio controls src="image_audio/Muse_SVS/F2_sad010_11_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
               <td style="padding-left: 50px;"><audio controls src="image_audio/Muse_SVS/F2_sad010_11_10(wout_ASPP).wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
             </tr>
 
@@ -268,7 +253,7 @@ table {color: black; font-size: 15px}
         <div id="audio">
         <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>Emotion Embeddding Interpolation and Extrapolation</b><br>
           <p style="font-size: 23px; color:black; text-align:center;">Muse-SVS can synthesize singing voices with emotional intensities, <br>which is <b style="color:red">not included in training data by emotion embedding interpolation and extrapolation</b>.<br>Please listen to the samples, <b style="color: red">focusing on expressiveness and fidelity.</b> </p>
-          <p style="font-size: 15px; color:black;">This figure is figure8(b) of the paper. Please check more details of the figure in the paper.</p>
+          <p style="font-size: 15px; color:black;">[Figure8(b) of the paper] Please check more details of the figure in the paper.</p>
           <img src="image_audio/embedding_space.png" style="width:600px;"/>
           <p style="font-size: 15px; color:black;">Embedding Space</p>
           <table align="center">
