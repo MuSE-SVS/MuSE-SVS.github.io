@@ -106,7 +106,7 @@ table {color: black; font-size: 15px}
     <div class="w3-container w3-content w3-padding-64" style="max-width:1600px">
       <h2 class="w3-wide w3-center">Audio Demo</h2>
       <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>Demonstaration of overall performance</b>
+        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><br><b>Demonstaration of overall performance</b>
           <p style="font-size: 23px; color:black; text-align:center;">Please listen to the samples, <b style="color: red">focusing on expressiveness and fidelity.</b> </p>
           <p style="font-size: 15px; color:black; text-align:center;">(There are the samples of other intensity levels in <a href="#audio">here</a>)</p>
           <p style="font-size: 20px; color:black; text-align:center;">Samples of female singer (Happy)</p>
@@ -179,10 +179,11 @@ table {color: black; font-size: 15px}
               <td><audio controls src="image_audio/VISinger/exp3_11.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
            </tr>
           </table>
+          <br>
         </li>
 
         <!-- Statistical Pitch Predictor -->
-        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>Statistical Pitch Predictor</b><br>
+        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><br><b>Statistical Pitch Predictor</b><br>
           <p style="font-size: 23px; color:black; text-align:center;">Statistical Pitch Predictor estimates <b style="color:red;">the distribution of the F0 frequencies at the phoneme level.</b><br>Please listen to the samples <b style="color:red;">focusing on vibrato and expressiveness</b> which have high similarity with G.T.</p>
           <p style="font-size: 15px; color:black;">
             This audio samples are corresponding to figure 3 in the paper. Please check more details of the figure in the paper.</p>
@@ -214,7 +215,7 @@ table {color: black; font-size: 15px}
           <br>
         </li>
         <!-- CRDP -->
-        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>Context-aware Residual Duration Predictor (CRDP)</b><br>
+        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><br><b>Context-aware Residual Duration Predictor (CRDP)</b><br>
           <p style="font-size: 23px; color:black; text-align:center;">These audio sample and figure demonstrate that CRDP <b style="color: red">exhibited a significantly lower synchronization error</b><br> than the baseline predictors for a long song. <br>Please listen to the sample, <b style="color: red">focusing on synchronization between duration of synthesized voice and MIDI</b>. </p>
           
           <p style="font-size: 15px; color:black;">[Figure7 of the paper] Please check more details of the figure in the paper.</p>
@@ -222,11 +223,12 @@ table {color: black; font-size: 15px}
           <audio controls src="image_audio/svs1.mp3">해당 브라우저는 audio를 지원하지 않습니다.</audio>
             
           <img src="image_audio/crdp_graph.PNG" style="width:700px;"/>
+          <br><br>
         </li>
 
         
         <!-- ASPP -->
-        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>ASPP-Transformer</b><br>
+        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b><br>ASPP-Transformer</b><br>
           <p style="font-size: 23px; color:black; text-align:center;">This figure and audio samples demonstrate that <b style="color:red;">ASPP-Transformer refers to broader
             contexts</b> than ordinary Transformer,<br> <b style="color:red;">producing a more stable
             Mel-spectrogram and vibrato</b>, which leads to improved fidelity
@@ -244,14 +246,14 @@ table {color: black; font-size: 15px}
               <td style="padding-left: 260px;"><audio controls src="image_audio/Muse_SVS/F2_sad010_11_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
               <td style="padding-left: 50px;"><audio controls src="image_audio/Muse_SVS/F2_sad010_11_10(wout_ASPP).wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
             </tr>
-
           </table>
+          <br>
         </li>
 
         <!-- Interpolation and extrapolation -->
         
         <div id="audio">
-        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b>Emotion Embeddding Interpolation and Extrapolation</b><br>
+        <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><br><b>Emotion Embeddding Interpolation and Extrapolation</b><br>
           <p style="font-size: 23px; color:black; text-align:center;">Muse-SVS can synthesize singing voices with emotional intensities, <br>which is <b style="color:red">not included in training data by emotion embedding interpolation and extrapolation</b>.<br>Please listen to the samples, <b style="color: red">focusing on expressiveness and fidelity.</b> </p>
           <p style="font-size: 15px; color:black;">[Figure8(b) of the paper] Please check more details of the figure in the paper.</p>
           <img src="image_audio/embedding_space.png" style="width:600px;"/>
@@ -283,6 +285,7 @@ table {color: black; font-size: 15px}
               <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_1.7.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
             </tr>
           </table>
+          <br>
         </li>
       </div>
       </ul>
