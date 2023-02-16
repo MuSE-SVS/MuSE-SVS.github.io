@@ -26,14 +26,16 @@ table {color: black; font-size: 15px}
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABSTRACT</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AUDIO DEMO</a>
-    <!-- <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Developers <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More"><a href="#audio" style="text-decoration-line: none;">AUDIO DEMO </a><i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Developers</a>
+        <a href="#audio" class="w3-bar-item w3-button">Overall performance</a>
+        <a href="#SPP" class="w3-bar-item w3-button">Statistical Pitch Predictor</a>
+        <a href="#CRDP" class="w3-bar-item w3-button">CRDP</a>
+        <a href="#ASPP" class="w3-bar-item w3-button">ASPP-Transformer</a>
+        <a href="#interpolation" class="w3-bar-item w3-button">Inter/Extrapolation</a>
       </div>
-    </div> -->
-    <!-- <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a> -->
+      </div> 
   </div>
 </div>
 
@@ -46,45 +48,37 @@ table {color: black; font-size: 15px}
 </div>
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<div class="w3-content" style="max-width:100%;margin-top:46px">
 
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center">
-    <img src="image_audio/Muse.PNG" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="image_audio/subtitle.png" style="width:100%">
+    <img src="image_audio/logo.png" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
     </div>
   </div>
 
-
-  <!-- The Band Section -->
+  
+<!------------------------------------------------------------------ Abstract ----------------------------------------------------------->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
     <h2 class="w3-wide"><b>MuSE-SVS</b></h2>
     <p class="w3-opacity"><i>Multi Singer Emotional Singing Voice Synthesizer that Controls Emotional Intensity</i></p>
     <p class="w3-justify">We propose a multi-singer emotional singing voice
-      synthesizer, <b>Muse-SVS</b>, that expresses emotion at various intensity levels by controlling subtle changes in pitch and phoneme
-      length while accurately following the lyrics, pitch, and phoneme
-      length of the score. To control multiple style attributes avoiding
+      synthesizer, <b>Muse-SVS</b>, that expresses emotion at various intensity levels by controlling subtle changes in pitch, energy, and phoneme
+      duration while accurately following the score. To control multiple style attributes while avoiding
       loss of fidelity and expressiveness due to interference between
       attributes, Muse-SVS represents all attributes and their relations
       together by a joint embedding in a unified embedding space.
-      Muse-SVS can express emotional intensity not in the training
+      Muse-SVS can express emotional intensity levels not included in the training
       data, including even stronger emotions than those in the training
-      data, through emotion embedding interpolation and extrapolation. We also propose a statistical pitch predictor to express pitch
-      variance according to emotional intensity and a context-aware
+      data through embedding interpolation and extrapolation. We also propose a statistical pitch predictor to express pitch
+      variance according to emotional intensity, and a context-aware
       residual duration predictor to prevent the accumulation of variances in phoneme duration, which is crucial for synchronization
-      when synthesizing long singing voices. In addition, we propose
-      a novel ASPP-Transformer to improve fidelity and expressiveness by referring to broad contexts. In experiments, Muse-SVS
+      with instrumental parts. In addition, we propose
+      a novel ASPP-Transformer, which combines atrous spatial pyramid pooling(ASPP) and Transformer, to improve fidelity and expressiveness by referring to broad contexts. In experiments, Muse-SVS
       exhibited improved fidelity, expressiveness, and synchronization
-      performance compared with the baseline models. The results of
-      quantitative evaluation and visualization analysis show that the
-      proposed methods effectively express the variance in pitch and
+      performance compared with the baseline models. The visualization results show that Muse-SVS effectively express the variance in pitch,energy, and
       phoneme duration according to emotional intensity. To the best
-      of our knowledge, Muse-SVS is the first singing voice synthesizer
+      of our knowledge, Muse-SVS is the first neural SVS
       capable of controlling emotional intensity.
       <!-- <a style='text-align: center; font-size: 15px; color: #9F8772;' href="https://arxiv.org/pdf/2203.00931.pdf" > U-Singer Paper link</a> -->
       </p>
@@ -101,14 +95,16 @@ table {color: black; font-size: 15px}
     </table>
     <br><br><br><br>
   </div>
-  <!-- The Tour Section -->
-  <div class="w3-black" id="tour">
+  
+  
+<!--------------------------------------------- Overall Performance ---------------------------------------------->
+  <div class="w3-black" id="audio">
     <div class="w3-container w3-content w3-padding-64" style="max-width:1600px">
       <h2 class="w3-wide w3-center">Audio Demo</h2>
       <ul class="w3-ul w3-border w3-white w3-text-grey">
         <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><br><b>Demonstaration of overall performance</b>
           <p style="font-size: 23px; color:black; text-align:center;">Please listen to the samples, <b style="color: red">focusing on expressiveness and fidelity.</b> </p>
-          <p style="font-size: 15px; color:black; text-align:center;">(There are the samples of other intensity levels in <a href="#audio">here</a>)</p>
+          <p style="font-size: 15px; color:black; text-align:center;">(There are the samples of other intensity levels in <a href="#interpolation">here</a>)</p>
           <p style="font-size: 20px; color:black; text-align:center;">Samples of female singer (Happy)</p>
           <table align="center">
             <colgroup span="5" class="columns"></colgroup>
@@ -116,6 +112,7 @@ table {color: black; font-size: 15px}
               <th></th>
               <th>Neutral</th>
               <th>Happy 1.0</th>
+              <th></th>
             </tr>
             <tr>
               <td><b style="color: blue">MuSE-SVS<br>(proposed)</b></td>
@@ -126,6 +123,7 @@ table {color: black; font-size: 15px}
               <td><b>MSME-VISinger</b></td>
               <td><audio controls src="image_audio/VISinger/F2_joy015_06_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
               <td><audio controls src="image_audio/VISinger/F2_joy015_06_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><a href="https://zhangyongmao.github.io/VISinger/" style="text-decoration-line: none;">VISinger Demo</a></td>
             </tr>
             <tr>
               <td><b>MSME-FFTSinger</b></td>
@@ -145,6 +143,7 @@ table {color: black; font-size: 15px}
               <th></th>
               <th>Neutral</th>
               <th>Sad 1.0</th>
+              <th></th>
             </tr>
             <tr>
               <td><b style="color: blue">MuSE-SVS<br>(proposed)</b></td>
@@ -155,6 +154,7 @@ table {color: black; font-size: 15px}
               <td><b>MSME-VISinger</b></td>
               <td><audio controls src="image_audio/VISinger/M2_sad010_13_00.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
               <td><audio controls src="image_audio/VISinger/M2_sad010_13_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <td><a href="https://zhangyongmao.github.io/VISinger/" style="text-decoration-line: none;">VISinger Demo</a></td>
             </tr>
             <tr>
               <td><b>MSME-FFTSinger</b></td>
@@ -167,22 +167,20 @@ table {color: black; font-size: 15px}
               <td><audio controls src="image_audio/GT/M2_sad010_13_10.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
             </tr>
           </table>
-          <br>
-          <p style="font-size: 16px; color:black; text-align:center;">(Audio samples in demo page of the baseline models)</p>
-          <table align="center">
-            <tr align="center">
-              <th>FastSpeech2</th>
-              <th>VISinger</th>
-            </tr>
-            <tr>
-              <td><audio controls src="image_audio/FFTSinger/0000000017.mp3">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-              <td><audio controls src="image_audio/VISinger/exp3_11.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
-           </tr>
-          </table>
+     
           <br>
         </li>
+        
+      </div>
+    </ul>
 
-        <!-- Statistical Pitch Predictor -->
+  </div>
+</div>
+
+<!--------------------------------------------------- Statistical Pitch Predictor ------------------------------------------------>
+  <div class="w3-black" id="SPP">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1600px">
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
         <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><br><b>Statistical Pitch Predictor</b><br>
           <p style="font-size: 23px; color:black; text-align:center;">Statistical Pitch Predictor estimates <b style="color:red;">the distribution of the F0 frequencies at the phoneme level.</b><br>Please listen to the samples <b style="color:red;">focusing on vibrato and expressiveness</b> which have high similarity with G.T.</p>
           <p style="font-size: 15px; color:black;">
@@ -214,7 +212,17 @@ table {color: black; font-size: 15px}
           </table>
           <br>
         </li>
-        <!-- CRDP -->
+        
+      </div>
+    </ul>
+
+  </div>
+</div>
+
+<!------------------------------------------------------------------ CRDP ----------------------------------------------------------->
+<div class="w3-black" id="CRDP">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:1600px">
+    <ul class="w3-ul w3-border w3-white w3-text-grey">
         <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><br><b>Context-aware Residual Duration Predictor (CRDP)</b><br>
           <p style="font-size: 23px; color:black; text-align:center;">These audio sample and figure demonstrate that CRDP <b style="color: red">exhibited a significantly lower synchronization error</b><br> than the baseline predictors for a long song. <br>Please listen to the sample, <b style="color: red">focusing on synchronization between duration of synthesized voice and MIDI</b>. </p>
           
@@ -227,7 +235,16 @@ table {color: black; font-size: 15px}
         </li>
 
         
-        <!-- ASPP -->
+      </div>
+    </ul>
+
+  </div>
+</div>
+        
+<!------------------------------------------------------------------ ASPP ----------------------------------------------------------->
+<div class="w3-black" id="ASPP">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:1600px">
+    <ul class="w3-ul w3-border w3-white w3-text-grey">
         <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><b><br>ASPP-Transformer</b><br>
           <p style="font-size: 23px; color:black; text-align:center;">This figure and audio samples demonstrate that <b style="color:red;">ASPP-Transformer refers to broader
             contexts</b> than ordinary Transformer,<br> <b style="color:red;">producing a more stable
@@ -250,39 +267,58 @@ table {color: black; font-size: 15px}
           <br>
         </li>
 
-        <!-- Interpolation and extrapolation -->
         
-        <div id="audio">
+      </div>
+    </ul>
+
+  </div>
+</div>
+
+<!--------------------------------------------- Interpolation and extrapolation -------------------------------------------------->
+        <div class="w3-black" id="interpolation">
+          <div class="w3-container w3-content w3-padding-64" style="max-width:1600px">
+            <ul class="w3-ul w3-border w3-white w3-text-grey">        
         <li class="w3-padding" style="font-size: 35px;  text-align:center; color:black;"><br><b>Emotion Embeddding Interpolation and Extrapolation</b><br>
           <p style="font-size: 23px; color:black; text-align:center;">Muse-SVS can synthesize singing voices with emotional intensities, <br>which is <b style="color:red">not included in training data by emotion embedding interpolation and extrapolation</b>.<br>Please listen to the samples, <b style="color: red">focusing on expressiveness and fidelity.</b> </p>
           <p style="font-size: 15px; color:black;">[Figure8(b) of the paper] Please check more details of the figure in the paper.</p>
           <img src="image_audio/embedding_space.png" style="width:600px;"/>
           <p style="font-size: 15px; color:black;">Embedding Space</p>
-          <table align="center">
+          <table align="center"  style="height:500px; width:800px;">
             <colgroup span="5" class="columns"></colgroup>
+            <tr style="font-size: 18px;">
+              <th>Emotional Intensity</th>
+              <th>Audio</th>
+              <th>Included in the training data</th>
+            </tr>
             <tr>
               <th>Neutral</th>
               <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_0.0.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <th>O</th>
             </tr>
             <tr>
               <th>Happy 0.3</th>
               <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_03.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <th>O</th>
             </tr>
             <tr>
-              <th><b style="color: blue">Happy 0.5 (not in the training data)</b></th>
+              <th><b style="color: blue">Happy 0.5<br>(Interpolation)</b></th>
               <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_0.5.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <th><b style="color: blue">X</b></th>
             </tr>
             <tr>
               <th>Happy0.7</th>
               <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_07.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <th>O</th>
             </tr>
             <tr>
               <th>Happy 1.0</th>
               <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_1.0.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <th>O</th>
             </tr>
             <tr>  
-              <th><b style="color: blue">Happy 1.7 (beyond the intensity range of traning data)</b></th>
+              <th><b style="color: blue">Happy 1.7<br>(Extrapolation)</b></th>
               <td><audio controls src="image_audio/Muse_SVS/F2_joy015_05_1.7.wav">해당 브라우저는 audio를 지원하지 않습니다.</audio></td>
+              <th><b style="color: blue">X</b></th>
             </tr>
           </table>
           <br>
@@ -293,16 +329,7 @@ table {color: black; font-size: 15px}
     </div>
   </div>
 
-<!-- End Page Content -->
 </div>
-
-<!-- Image of location/map -->
-<!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> -->
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
 
 <script>
 // Automatic Slideshow - change image every 4 seconds
